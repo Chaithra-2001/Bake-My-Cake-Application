@@ -1,0 +1,83 @@
+
+<div style="display: flex; margin: 20px 10px;">
+ 
+    <img src="../../assets/{{cakedisplay.id}}.jpg" style="width: 400px;" alt="">
+
+
+    <div style="margin-left: 10px;">
+        <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><b>{{cakedisplay.name | titlecase}}</b> </h1>
+
+        <h2>Price:<mat-icon class="mat1"
+          aria-hidden="false" style="color: black;" aria-label="Rupee symbol">&#x20B9;</mat-icon>{{myorderinfo.cost}} </h2>
+        <h3>{{cakedisplay.isegg}} <span>/ {{cakedisplay.flavour}}</span></h3>
+        <div style="margin-top: 30px;">
+            <b>Weight :</b><br>
+            <div style="display: flex;margin-right: 8px;">
+            <button class="kgbutton" (click)="updateQuantity(1)">1kg</button>
+                <button class="kgbutton" (click)="updateQuantity(1.5)">1.5kg</button>
+                <button class="kgbutton" (click)="updateQuantity(3)">3kg</button>
+                <button class="kgbutton" (click)="updateQuantity(2)">2kg</button>
+            </div>
+        </div><br><br>
+       <div >
+        <b>Number Of Items:</b><br>
+        <input type="number" [(ngModel)]="userEnteredQuantity" name="userEnteredQuantity" (change)="calculateTotalPrice()" style="width: 80px;">
+       </div>
+    
+        <h2 style="margin-top: 60px;">Total Amount :{{totalPrice}} Rs</h2>
+    </div>
+    <div style="margin-left: 100px; width: 180px;">
+        <h1>Delivary Details</h1>
+      
+         <form >
+          <mat-card style="width: 200%;">
+               
+            <mat-form-field appearance="fill">
+              <mat-label>Name</mat-label>
+              <input matInput [(ngModel)]="myorderinfo.firstName"   #firstName="ngModel"  type="text" name="firstName" >
+            </mat-form-field>
+    
+            
+            <mat-form-field appearance="fill" >
+              <mat-label>Email Id</mat-label>
+              <input matInput  [(ngModel)]="myorderinfo.emailid" #emailid="ngModel"  type="text" name="emailid">
+            </mat-form-field>
+            
+            
+                <mat-form-field appearance="fill">
+                  <mat-label>Phone Number</mat-label>
+                  <input matInput   [(ngModel)]="myorderinfo.phone" #phone="ngModel"  type="text" name="phonr" >
+                </mat-form-field>
+        
+
+                <mat-form-field class="example-full-width">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput placeholder="Address" [(ngModel)]="myorderinfo.address"  #address="ngModel"   name="address" ></textarea>
+                  </mat-form-field>
+
+
+
+
+                  <mat-form-field style="width: 100%;">
+                    <input matInput [(ngModel)]="myorderinfo.CakedeliveryDate" [matDatepicker]="picker" placeholder="Order Date"  #orderdate="ngModel"   name="orderdate" >
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                
+                
+                
+                  <mat-form-field appearance="fill" style="width: 100%;">
+                    <mat-label>Message On Cake</mat-label>
+                    <input matInput [(ngModel)]="myorderinfo.messageonCake"  #msgoncake="ngModel"   name="msgoncake" >
+                    
+                  </mat-form-field>
+               
+      </mat-card>
+         </form>
+              
+    </div>
+    
+</div>
+<button (click)="placeOrder()" style="margin: 0px 70%; width: 300px; height: 60px; background-color: rgb(244, 100, 203);"> <b>ORDER NOW</b></button>
+
+

@@ -1,0 +1,138 @@
+{
+  "cakes": [
+    {
+      "name": "Chocolate",
+      "cakeDescription": "Indulge in the rich and decadent world of our Chocolate cake. This delicious treat is perfect for all chocolate lovers.",
+      "price": 500,
+      "isegg": "Egg",
+      "rating": 4.5,
+      "id": 1,
+      "flavour": "choco"
+    },
+    {
+      "name": "Blueberry Cake",
+      "cakeDescription": "Savor the delightful taste of our Blueberry Cake. Bursting with the goodness of blueberries, this eggless cake is a true delight.",
+      "price": 450,
+      "isegg": "Eggless",
+      "rating": 4.3,
+      "id": 2,
+      "flavour": "jerry"
+    },
+    {
+      "name": "Cream Cake",
+      "cakeDescription": "Experience the lusciousness of our Cream Cake. This deliciously creamy delight is a treat for your taste buds.",
+      "price": 550,
+      "isegg": "Egg",
+      "rating": 4.6,
+      "id": 3,
+      "flavour": "cream"
+    },
+    {
+      "name": "Cheese Cake",
+      "cakeDescription": "Indulge in the rich and cheesy goodness of our Cheese Cake. This delightful egg-based cake is a cheese lover's dream.",
+      "price": 670,
+      "isegg": "Egg",
+      "rating": 4.3,
+      "id": 4,
+      "flavour": "cheese"
+    },
+    {
+      "name": "Fruit Cake",
+      "cakeDescription": "Treat yourself to a burst of fruity flavors with our Fruit Cake. Packed with a variety of fruits, this eggless cake is a fruity delight.",
+      "price": 450,
+      "isegg": "Eggless",
+      "rating": 4.7,
+      "id": 5,
+      "flavour": "mixedfruit flavour"
+    },
+    {
+      "name": "Kit Kat Cake",
+      "cakeDescription": "Experience the crunch of Kit Kat in every bite with our Kit Kat Cake. This eggless delight is perfect for chocolate and Kit Kat enthusiasts.",
+      "price": 650,
+      "isegg": "Eggless",
+      "rating": 5,
+      "id": 6,
+      "flavour": "choco"
+    },
+    {
+      "name": "Pineapple Cake",
+      "cakeDescription": "Delight in the tropical goodness of our Pineapple Cake. Made with fresh pineapples, this egg-based cake is a tropical treat.",
+      "price": 700,
+      "isegg": "Egg",
+      "rating": 4.9,
+      "id": 7,
+      "flavour": "pine apple"
+    },
+    {
+      "name": "Butterscotch Cake",
+      "cakeDescription": "Satisfy your sweet tooth with the rich and buttery flavor of our Butterscotch Cake. This eggless delight is a sweet indulgence.",
+      "price": 800,
+      "isegg": "Eggless",
+      "rating": 5,
+      "id": 9,
+      "flavour": "butter"
+    },
+    {
+      "name": "Red Velvet Cake",
+      "cakeDescription": "Experience the velvety smoothness and vibrant red color of our Red Velvet Cake. This eggless delight is infused with the sweet essence of vanilla.",
+      "price": 800,
+      "isegg": "Eggless",
+      "flavour": "Vanilla",
+      "rating": 5,
+      "id": 10
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Administrator",
+      "lastName": "",
+      "password": "Admin@123",
+      "confirmPassword": "Admin@123",
+      "gender": "Female",
+      "age": "24",
+      "email": "admin@gmail.com",
+      "phone": "9738416898",
+      "address": {
+        "street": "2903 sixth cross rp road",
+        "city": "Mysore",
+        "state": "Karnataka",
+        "zipCode": "571301"
+      },
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "firstName": "Chaithra S",
+      "role": "user",
+      "phone": "8088511568",
+      "email": "chaithras2192001@gmail.com",
+      "password": "Chai@123",
+      "confirmPassword": "Chai@123",
+      "address": {
+        "street": "",
+        "city": "malavalli",
+        "state": "Jayanagara 4th block ,near rotary high school ,bangalore ,Karnataka -571222",
+        "zipCode": ""
+      },
+      "id": 2
+    }
+  ],
+  "orders": [
+    {
+      "emailid": "chaithras2192001@gmail.com",
+      "firstName": "Chaithra S",
+      "phone": "8088511568",
+      "address": "Jayanagara 4th block ,near rotary high school ,bangalore ,Karnataka -571222",
+      "cakeName": "Blueberry Cake",
+      "cost": 450,
+      "flavour": "jerry",
+      "isegg": "Eggless",
+      "weight": 1,
+      "totalPrice": 450,
+      "noofItems": 1,
+      "CakedeliveryDate": "",
+      "messageonCake": "",
+      "id": 1
+    }
+  ]
+}
