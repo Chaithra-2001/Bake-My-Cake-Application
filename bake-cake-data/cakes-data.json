@@ -1,15 +1,6 @@
 {
   "cakes": [
     {
-      "name": "Chocolate",
-      "cakeDescription": "Indulge in the rich and decadent world of our Chocolate cake. This delicious treat is perfect for all chocolate lovers.",
-      "price": 500,
-      "isegg": "Egg",
-      "rating": 4.5,
-      "id": 1,
-      "flavour": "choco"
-    },
-    {
       "name": "Blueberry Cake",
       "cakeDescription": "Savor the delightful taste of our Blueberry Cake. Bursting with the goodness of blueberries, this eggless cake is a true delight.",
       "price": 450,
@@ -44,42 +35,6 @@
       "rating": 4.7,
       "id": 5,
       "flavour": "mixedfruit flavour"
-    },
-    {
-      "name": "Kit Kat Cake",
-      "cakeDescription": "Experience the crunch of Kit Kat in every bite with our Kit Kat Cake. This eggless delight is perfect for chocolate and Kit Kat enthusiasts.",
-      "price": 650,
-      "isegg": "Eggless",
-      "rating": 5,
-      "id": 6,
-      "flavour": "choco"
-    },
-    {
-      "name": "Pineapple Cake",
-      "cakeDescription": "Delight in the tropical goodness of our Pineapple Cake. Made with fresh pineapples, this egg-based cake is a tropical treat.",
-      "price": 700,
-      "isegg": "Egg",
-      "rating": 4.9,
-      "id": 7,
-      "flavour": "pine apple"
-    },
-    {
-      "name": "Butterscotch Cake",
-      "cakeDescription": "Satisfy your sweet tooth with the rich and buttery flavor of our Butterscotch Cake. This eggless delight is a sweet indulgence.",
-      "price": 800,
-      "isegg": "Eggless",
-      "rating": 5,
-      "id": 9,
-      "flavour": "butter"
-    },
-    {
-      "name": "Red Velvet Cake",
-      "cakeDescription": "Experience the velvety smoothness and vibrant red color of our Red Velvet Cake. This eggless delight is infused with the sweet essence of vanilla.",
-      "price": 800,
-      "isegg": "Eggless",
-      "flavour": "Vanilla",
-      "rating": 5,
-      "id": 10
     }
   ],
   "users": [
@@ -115,6 +70,36 @@
         "zipCode": ""
       },
       "id": 2
+    },
+    {
+      "firstName": "Arathi",
+      "role": "user",
+      "phone": "9999999999",
+      "email": "arathi@gmail.com",
+      "password": "Arthi@123",
+      "confirmPassword": "Arthi@123",
+      "address": {
+        "street": "kalyani koppalu",
+        "city": "malavalli",
+        "state": "Karnataka",
+        "zipCode": "574563"
+      },
+      "id": 3
+    },
+    {
+      "firstName": "vishuu",
+      "role": "user",
+      "phone": "9999999999",
+      "email": "vishu@gmail.com",
+      "password": "Vishu@123",
+      "confirmPassword": "Vishu@123",
+      "address": {
+        "street": "",
+        "city": "malavalli",
+        "state": "Karnataka",
+        "zipCode": "999999"
+      },
+      "id": 4
     }
   ],
   "orders": [
@@ -127,12 +112,96 @@
       "cost": 450,
       "flavour": "jerry",
       "isegg": "Eggless",
+      "weight": 2,
+      "totalPrice": 900,
+      "noofItems": "2",
+      "CakedeliveryDate": "2023-12-25T18:30:00.000Z",
+      "messageonCake": "Happy Birthday",
+      "id": 1
+    },
+    {
+      "emailid": "chaithras2192001@gmail.com",
+      "firstName": "Chaithra S",
+      "phone": "8088511568",
+      "address": "Jayanagara 4th block ,near rotary high school ,bangalore ,Karnataka -571222",
+      "cakeName": "Kit Kat Cake",
+      "cost": 650,
+      "flavour": "choco",
+      "isegg": "Eggless",
+      "weight": 3,
+      "totalPrice": 1950,
+      "noofItems": "1",
+      "CakedeliveryDate": "2023-12-26T18:30:00.000Z",
+      "messageonCake": "Happy Birthday",
+      "id": 2
+    },
+    {
+      "emailid": "arathi@gmail.com",
+      "firstName": "Arathi",
+      "phone": "9999999999",
+      "address": "Karnataka",
+      "cakeName": "Blueberry Cake",
+      "cost": 450,
+      "flavour": "jerry",
+      "isegg": "Eggless",
       "weight": 1,
       "totalPrice": 450,
+      "noofItems": "3",
+      "CakedeliveryDate": "2023-12-26T18:30:00.000Z",
+      "messageonCake": "Happy Birthday",
+      "address1": "574563",
+      "id": 3
+    },
+    {
+      "emailid": "chaithras2192001@gmail.com",
+      "firstName": "Chaithra S",
+      "phone": "8088511568",
+      "address": "Jayanagara 4th block ,near rotary high school ,bangalore ,Karnataka -571222",
+      "cakeName": "Cream Cake",
+      "cost": 550,
+      "flavour": "cream",
+      "isegg": "Egg",
+      "weight": 2,
+      "totalPrice": 1100,
+      "noofItems": "2",
+      "CakedeliveryDate": "2023-12-28T18:30:00.000Z",
+      "messageonCake": "Happy Birthday",
+      "address1": "789988",
+      "id": 4
+    },
+    {
+      "emailid": "vishu@gmail.com",
+      "firstName": "vishuu",
+      "phone": "9999999999",
+      "address": "Karnataka",
+      "cakeName": "Cream Cake",
+      "cost": 550,
+      "flavour": "cream",
+      "isegg": "Egg",
+      "weight": 1,
+      "totalPrice": 1650,
       "noofItems": 1,
-      "CakedeliveryDate": "",
+      "CakedeliveryDate": "2023-12-26T18:30:00.000Z",
+      "messageonCake": "ll",
+      "address1": "999999",
+      "id": 5
+    },
+    {
+      "emailid": "vishu@gmail.com",
+      "firstName": "vishuu",
+      "phone": "9999999999",
+      "address": "Karnataka",
+      "cakeName": "Cream Cake",
+      "cost": 550,
+      "flavour": "cream",
+      "isegg": "Egg",
+      "weight": 1.5,
+      "totalPrice": 0,
+      "noofItems": 1,
+      "CakedeliveryDate": "2023-12-29T18:30:00.000Z",
       "messageonCake": "",
-      "id": 1
+      "address1": "999999",
+      "id": 6
     }
   ]
 }

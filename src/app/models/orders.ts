@@ -14,6 +14,7 @@ export type Order={
     noofItems?:number,
     CakedeliveryDate?:string,
     messageonCake?:string,
+    address1:string
 
      
 }

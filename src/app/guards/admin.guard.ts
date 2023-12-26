@@ -14,7 +14,7 @@ export class AdminComponentGuard implements CanActivate {
     if (this.loginserv.isAdminLoggedIn) {
       return true
     } else {
-      this.router.navigateByUrl(" ");
+      this.router.navigateByUrl("login");
       return false;
 
     }

@@ -6,15 +6,25 @@ import { EditcakedetailsComponent } from '../editcakedetails/editcakedetails.com
 import { RegisterComponent } from '../register/register.component';
 
 
+// @Injectable({
+//   providedIn: 'root'
+// })
+
 @Injectable({
   providedIn: 'root'
 })
-export class AdminClosingGuard implements CanDeactivate<AddcakeComponent| EditcakedetailsComponent |RegisterComponent >{
-  canDeactivate(component: AddcakeComponent |EditcakedetailsComponent |RegisterComponent,
+
+
+
+
+
+
+export class AdminClosingGuard implements CanDeactivate<AddcakeComponent  >{
+  canDeactivate(component:AddcakeComponent ,
      currentRoute: ActivatedRouteSnapshot, 
      currentState: RouterStateSnapshot, 
      nextState: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
- return component.canClose? component.canClose():true;
+      return component.canDeactivate ? component.canDeactivate() : true;
   }
 
 }

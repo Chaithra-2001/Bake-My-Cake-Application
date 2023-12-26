@@ -8,12 +8,14 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AdminComponentGuard } from './guards/admin.guard';
-import { AdminClosingGuard } from './guards/adminclosing.guard';
+// import { AdminClosingGuard } from './guards/adminclosing.guard';
 
 import { OrderCakePageComponent } from './order-cake-page/order-cake-page.component';
-import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+
 import { ViewMyOrderComponent } from './view-my-order/view-my-order.component';
 import { AdminViewAllOrderComponent } from './admin-view-all-order/admin-view-all-order.component';
+import { UserComponentGuard } from './guards/user.guard';
+import { AdminClosingGuard } from './guards/adminclosing.guard';
 // import { UserClosingGuard } from './guards/userclosing.guard';
 
 
@@ -27,6 +29,7 @@ const routes: Routes = [
     component:AddcakeComponent,
     canActivate:[AdminComponentGuard],
     canDeactivate:[AdminClosingGuard]
+   
   },
   {
     path:"ViewCake",
@@ -42,7 +45,8 @@ const routes: Routes = [
     path:"editcakedetails/:id", 
      component:EditcakedetailsComponent,
      canActivate:[AdminComponentGuard],
-     canDeactivate:[AdminClosingGuard]
+
+     
   },
   {
     path:"login",
@@ -51,7 +55,8 @@ const routes: Routes = [
   {
     path:"register",
     component:RegisterComponent,
-    canDeactivate:[AdminClosingGuard]
+  
+   
   },
 
   // {
@@ -61,6 +66,7 @@ const routes: Routes = [
   {
    path:"order/:id",
    component:OrderCakePageComponent ,
+   canActivate:[UserComponentGuard]
   },
 
 

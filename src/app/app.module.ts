@@ -36,7 +36,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 
 import { OrderCakePageComponent } from './order-cake-page/order-cake-page.component';
-import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ViewMyOrderComponent } from './view-my-order/view-my-order.component';
@@ -45,7 +45,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, AddcakeComponent, ViewonecakedeatilsComponent, EditcakedetailsComponent, LoginComponent, RegisterComponent, PageNotFoundComponent, OrderCakePageComponent, AddToCartComponent, ViewMyOrderComponent, AdminViewAllOrderComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, AddcakeComponent, ViewonecakedeatilsComponent, EditcakedetailsComponent, LoginComponent, RegisterComponent, PageNotFoundComponent, OrderCakePageComponent, ViewMyOrderComponent, AdminViewAllOrderComponent],
   
   imports: [
     BrowserModule,

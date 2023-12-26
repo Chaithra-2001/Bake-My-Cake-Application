@@ -8,7 +8,7 @@
         <div class="contents">
             <h1 style='font-weight:bolder' class="cake-name">{{cakedisplay.name |titlecase}}</h1>
 
-            <h1> <mat-icon class="mat1" aria-hidden="false" aria-label="Rupee symbol">&#x20B9;</mat-icon> {{cakedisplay.price}}</h1>
+            <h1> ₹{{cakedisplay.price}}</h1>
 
 
 
@@ -19,24 +19,7 @@
             <!-- <h4>{{cakedisplay.price}}</h4> -->
 
 
-           
-            <!-- <span style="margin-left: 0px; font-weight: bolder;">Egg Or Eggless </span><br>
-            <div style="margin-top: 10px;">
-                <button style="color: azure; margin-right: 10px; width: 70px;height: 30px; background-color: brown;" class="button-egg"
-                    (click)="selectOption('Egg')"
-                    [style.backgroundColor]="selectedOption === 'Egg' ? 'orange' : 'initial'">Egg</button>
-                <button style="color: azure; margin-right: 10px; width: 70px;height: 30px;"
-                    (click)="selectOption('Eggless')"
-                    [style.backgroundColor]="selectedOption === 'Eggless' ? 'orange' : 'initial'">Eggless</button>
-            </div> -->
-
-        
-
-            
-            
-            
-            
-            <h4 style="margin-top: 10px;"><mat-icon
+        <h4 style="margin-top: 10px;"><mat-icon
                     style="color: darkgoldenrod; margin-top: 2px; margin-right: 5px;">star</mat-icon>{{cakedisplay.rating}}/5
             </h4>
 

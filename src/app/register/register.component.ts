@@ -9,81 +9,60 @@ import { Router } from '@angular/router';
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
-export class RegisterComponent implements OnInit{
- // In your component
-//  states: string[] = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', /* ... add more states */];
-//   selectedState: string = ''; // To store the selected state
+export class RegisterComponent implements OnInit {
 
-//   // Function to handle the selection change
-//   onStateChange(event: any) {
-//     this.selectedState = event.target.value;
-//     console.log('Selected State:', this.selectedState);
-//   }
-
-
-
-
-
-
-
-
-
-
-  constructor(private formbuilder:FormBuilder, private userservice:UserService,private _snackBar: MatSnackBar,private route:Router){}
+  constructor(private formbuilder: FormBuilder, private userservice: UserService, private _snackBar: MatSnackBar, private route: Router) { }
   ngOnInit(): void {
-    
-  }
-  hide=true
-  passwordPattern:any = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-  registerForm=this.formbuilder.group({
-    firstName:['',[Validators.required,Validators.minLength(2)]],
-    role:['user'],
-    phone:['',[Validators.pattern(/^(\+\d{1,3}[- ]?)?\d{10}$/)]],
-    email:['',[Validators.required,Validators.pattern("^[a-zA-Z0-9._%+-]+@gmail\.com$")]],
-    password:['',[Validators.required,Validators.pattern(this. passwordPattern)]],
-    confirmPassword:['',[Validators.required,Validators.pattern(this. passwordPattern)]],
-    address:this.formbuilder.group({
-      street:[''],
-     city:[''],
-     state:[''],
-     zipCode:['',[Validators.required,Validators.pattern("[0-9]{6}")]],
- 
-   })
-  },{validators:this.passwordCheck})
 
-  get zipCode(){
+  }
+  hide = true
+  passwordPattern: any = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  registerForm = this.formbuilder.group({
+    firstName: ['', [Validators.required, Validators.minLength(2), Validators.pattern(/^[A-Za-z]+$/)]],
+    role: ['user'],
+    phone: ['', [Validators.pattern(/^(\+\d{1,3}[- ]?)?\d{10}$/)]],
+    email: ['', [Validators.required, Validators.pattern("^[a-zA-Z0-9._%+-]+@gmail\.com$")]],
+    password: ['', [Validators.required, Validators.pattern(this.passwordPattern)]],
+    confirmPassword: ['', [Validators.required, Validators.pattern(this.passwordPattern)]],
+    address: this.formbuilder.group({
+      street: [''],
+      city: [''],
+      state: [''],
+      zipCode: ['', [Validators.required, Validators.pattern("[0-9]{6}")]],
+
+    })
+  }, { validators: this.passwordCheck })
+
+  get zipCode() {
     return this.registerForm.get('address.zipCode')
   }
 
-  get firstName(){
+  get firstName() {
     return this.registerForm.get('firstName');
   }
 
-  get email(){
+  get email() {
     return this.registerForm.get('email');
   }
-  passwordCheck(ac:AbstractControl)
-  {
-    let pass=ac.get('password')?.value;
-    let cpass=ac.get('confirmPassword')?.value;
-    if(pass==cpass  )
-    {
+  passwordCheck(ac: AbstractControl) {
+    let pass = ac.get('password')?.value;
+    let cpass = ac.get('confirmPassword')?.value;
+    if (pass == cpass) {
       return null;
     }
-    else
-    {
-      return{passwordMismatch: true}
+    else {
+      return { passwordMismatch: true }
     }
   }
-  get   confirmPassword (){
+  get confirmPassword() {
     return this.registerForm.get('confirmPassword');
   }
 
-  get  phone(){
+  get phone() {
     return this.registerForm.get('phoneNumber');
   }
-  
-  get password(){
+
+  get password() {
     return this.registerForm.get('password');
   }
 
@@ -98,22 +77,22 @@ export class RegisterComponent implements OnInit{
         else {
           this.userservice.addUser(this.registerForm.value).subscribe(data => {
             this._snackBar.open('Congrats!! You have succesfully registered', 'success', {
-                      duration: 5000,
-                      panelClass: ['mat-toolbar', 'mat-primary']
-             });
+              duration: 5000,
+              panelClass: ['mat-toolbar', 'mat-primary']
+            });
           })
         }
       })
     }
     this.route.navigateByUrl("login")
   }
-  canClose(){
-    if(this.registerForm.dirty){
-      let result =confirm('Leaving this page will cause any unsaved data to be lost.\nAre you sure you want to leave this page')
+  adminClose() {
+    if (this.registerForm.dirty) {
+      let result = confirm('Leaving this page will cause any unsaved data to be lost.\nAre you sure you want to leave this page')
       return result
-    }else{
+    } else {
       return true
     }
   }
-    
-  }
+
+}

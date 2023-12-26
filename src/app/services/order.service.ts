@@ -24,7 +24,9 @@ export class OrderService {
 
 
    
- 
+   getOrdersForUser(email: string): Observable<Order[]> {
+    return this.httpClient.get<Order[]>(`http://localhost:3000/orders?email=${email}`);
+  }
 
 
 

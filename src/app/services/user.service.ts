@@ -23,6 +23,7 @@ export class UserService {
 
   checkEmailAndPassword(email: String, password: String) {
     return this.httpClient.get<User[]>("http://localhost:3000/users?email=" + email + "&password=" + password);
+
   }
 
   getUser(user: any) {

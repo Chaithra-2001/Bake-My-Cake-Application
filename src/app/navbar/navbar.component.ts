@@ -20,6 +20,7 @@ export class NavbarComponent {
     );
 
     logout(){
-      this.loginservice.canlogout()
+    this.loginservice.isAdminLoggedIn=false;
+    this.loginservice.isUserLoggedIn=false;
     }
 }

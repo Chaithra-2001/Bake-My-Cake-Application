@@ -9,6 +9,7 @@
 
       <mat-error *ngIf="firstName?.errors?.['required']">First Name Is Mandatory </mat-error>
       <mat-error *ngIf="firstName?.errors?.['minlength']">First Name should contain atleast 2 characters </mat-error>
+      <mat-error *ngIf="firstName?.errors?.['pattern']">First Name should includes both upper case and lower case </mat-error>
     </mat-form-field>
 
 
@@ -24,19 +25,23 @@
       <mat-error *ngIf="email?.errors?.['required']">Email id is required </mat-error>
       <mat-error *ngIf="email?.errors?.['pattern']">Enter valid email address </mat-error>
     </mat-form-field>
+
     <mat-form-field appearance="fill">
       <mat-label>Password</mat-label>
-      <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" >
-      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
       <mat-error *ngIf="password?.errors?.['required']">Password is required </mat-error>
       <mat-error *ngIf="password?.errors?.['pattern']">Password must contain the specified pattern</mat-error>
     </mat-form-field>
+
     <mat-form-field appearance="fill">
       <mat-label>confirm Password</mat-label>
       <input matInput formControlName="confirmPassword" [type]="hide ? 'password' : 'text'">
-      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
       <mat-error *ngIf="confirmPassword?.errors?.['required']">Confirm Password is required </mat-error>
@@ -44,20 +49,10 @@
       <!-- pattern</mat-error> -->
       <mat-error *ngIf="registerForm.errors?.['passwordMismatch']">Password and Confirm Password do not matching
       </mat-error>
-
     </mat-form-field>
+
     <h1 style="color: black;">Address</h1>
     <div formGroupName="address" style="min-width:600px ;">
-
-<!-- 
-      <mat-form-field class="example-full-width" style="  min-width: 90%;" >
-        <mat-label>Leave a comment</mat-label>
-        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-      </mat-form-field> -->
-
-
-      
-
 
       <div id="radio">
         <mat-form-field appearance="fill">
@@ -72,17 +67,10 @@
         </mat-form-field>
 
 
-      
-
-
-
-        
-
-
       </div>
       <div>
         <mat-form-field appearance="fill">
-<mat-label>Street</mat-label>
+          <mat-label>Street</mat-label>
           <input matInput formControlName="street">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill" id="radio" style="margin-left: 30px;">
@@ -94,12 +82,14 @@
       </div>
     </div>
     <div>
-      <button mat-raised-button color="primary" type="submit"
-        style=" height: 50px; border-radius: 10px; width: 250px;" [disabled]="registerForm.invalid">SIGN IN</button>
+      
+      <button mat-raised-button color="primary" type="submit" style=" height: 50px; border-radius: 10px; width: 250px;"
+        [disabled]="registerForm.invalid">SIGN IN</button>
       <button mat-raised-button color="primary" type="reset"
         style=" height: 50px; border-radius: 10px; margin-left: 40px; width: 250px; background-color: rgb(225, 24, 182);">RESET</button>
     </div>
-    <b style="margin-top: 30px;color: rgb(16, 19, 22);">Already a member?<a routerLink="/login" style="margin-left: 10px;color: rgb(28, 29, 29);">Login</a></b>
-   </mat-card>
+    <b style="margin-top: 30px;color: rgb(16, 19, 22);">Already a member?<a routerLink="/login"
+        style="margin-left: 10px;color: rgb(28, 29, 29);">Login</a></b>
+  </mat-card>
 
 </form>
