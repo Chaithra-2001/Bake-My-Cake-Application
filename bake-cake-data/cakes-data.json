@@ -26,16 +26,8 @@
       "rating": 4.3,
       "id": 4,
       "flavour": "cheese"
-    },
-    {
-      "name": "Fruit Cake",
-      "cakeDescription": "Treat yourself to a burst of fruity flavors with our Fruit Cake. Packed with a variety of fruits, this eggless cake is a fruity delight.",
-      "price": 450,
-      "isegg": "Eggless",
-      "rating": 4.7,
-      "id": 5,
-      "flavour": "mixedfruit flavour"
     }
+  
   ],
   "users": [
     {
